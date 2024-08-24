@@ -53,23 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('/', { 
+      fetch('/', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      });
+      })
 
-      const result = await response.json();
-
-      if (response.ok) {
-        showToast('Login successful!');
-      } else {
-        showToast(`Error: ${result.message}`);
-      }
     } catch (error) {
-      showToast(`Error: ${error.message}`);
+      window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     }
   });
 });
