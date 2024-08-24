@@ -1,0 +1,20 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Novel Website",
+  "main": "novelServer.js",
+  "scripts": {
+    "start": "nodemon novelServer.js"
+  },
+  "author": "Griffin",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1"
+  }
+}

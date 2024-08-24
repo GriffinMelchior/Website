@@ -1,0 +1,138 @@
+.topHeader{
+  height: 75px;
+  background-color: aliceblue;
+}
+
+.topHeader > .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 75px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.left{
+  display: inherit;
+  align-items: inherit;
+}
+.left > img{
+  height: 75px;
+  width: 75px;
+}
+.left > p{
+  font-size:45px;
+  margin: 0;
+}
+
+#menuToggler{
+  background-image: url(../menu-toggler.png);
+  float: right;
+  margin: 23px 3px 0 13px;
+  width:  40px;
+  height: 30px;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+
+.menu > .container{
+  width: inherit;
+  background-color: rgb(68, 77, 88);
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.menu{
+  background-color: rgb(68, 77, 88);
+  overflow: hidden;
+  height: 0px;
+  margin: 0 auto;
+  transition: all 0.4s ease-in-out;
+  display: block;
+}
+
+.container > form{
+  margin-top: 10px;
+}
+
+.container > button{
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  color: white;
+  border-width: 5px;
+  border-style: none;
+  border-radius: 15px;
+  background: linear-gradient(to right, rgb(30, 45, 50), rgb(35, 45, 50));
+}
+
+.container > button:hover{
+  background: linear-gradient(to right, rgb(50, 82, 94), rgb(111, 144, 161));
+}
+
+.open{
+  height: 100px;
+}
+@media (max-width: 999px) {
+  #menuToggler{
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu > .container {
+    width: 1000px;
+  }
+  .topHeader> .container {
+    width: 1000px;
+  }
+}
+.hidden{
+  display: none;
+  
+}
+.hidden.active{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+}
+.Website.blured{
+  filter: blur(5px);
+}
+.loginContainer{
+  background-color: #212329;
+  height: 300px;
+  margin: 0 15px;
+  display: grid;
+  padding: 20px;
+  width: 350px;
+}
+
+.name, .password{
+  height: 30px;
+  
+}
+.enter{
+  height: 40px;
+}
+
+#profile{
+  display: block;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: 10px;
+}
+#profile > img{
+  width: inherit;
+  height: inherit;
+  border-radius: 20px;
+}

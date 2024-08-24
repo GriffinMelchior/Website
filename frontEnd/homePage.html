@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/general.css">
+  <link rel="stylesheet" href="CSS/Slides.css">
+  <link rel="stylesheet" href="CSS/Header.css">
+  <link rel="stylesheet" href="CSS/content.css">
+  <script type="module" src="JS/Slides.js" defer></script>
+  <script src="JS/Header.js" defer></script>
+  <script type="module" src="JS/content.js"></script>
+  <title>novel</title>
+</head>
+<body>
+  <div class="Website">
+    <header>
+      <div class="topHeader">
+        <div class="container">
+        <div class="left">
+          <img src="LOGO.png" alt="">
+          <p>Sol</p>
+        </div>
+        <div class="right">
+          <a id="menuToggler" href="javascript:;"></a>
+          <a id="profile" href="/">
+            <img src="defaultProfile.jpg" alt="">
+          </a> 
+          <!-- href location should change to profile page -->
+        </div>
+        </div>
+      </div>
+      <div id="menu" class="menu">
+        <div id="c" class="container">
+          <button id="login">LOGIN</button>
+          <form action="">
+            <input type="text">
+            <button>SEARCH</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section  aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev"></button>
+          <button class="carousel-button next" data-carousel-button="next"></button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="image.jpg" alt="Nature Image #1">
+            </li>
+            <li class="slide">
+              <img src="image1.jpg" alt="Nature Image #2">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="content">
+        <div class="novel row">
+          <div class="rowName">
+            <h1 class="">NOVEL</h1>
+          </div>
+          <ul>
+            <li class="item">
+              <div class="coverPage">
+                <a href="/">
+                  <img src="placeHolder.png" alt="">
+                </a>
+              </div>
+              <div class="title">
+                <h2 class="titleText">
+                <a href="/">
+                  TITLE
+                </a>
+                </h2>
+              </div>
+              <div class="chapter">
+                <a href="/">
+                  <div class="chapterText">
+                    <span>chapter1</span>
+                  </div>
+                </a>
+                <a href="/">
+                  <div class="chapterText">
+                    <span>chapter1</span>
+                  </div>
+                </a>
+                <a href="/">
+                  <div class="chapterText">
+                    <span>chapter1</span>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="manga row">
+          <div class="rowName">
+            <h1 class="">MANGA</h1>
+          </div>
+          <ul>
+            <li class="item">
+              <div class="coverPage">
+                <a href="/">
+                  <img src="placeHolder.png" alt="">
+                </a>
+              </div>
+              <div class="title">
+                <h2 class="titleText">
+                <a href="/">
+                  TITLE
+                </a>
+                </h2>
+              </div>
+              <div class="chapter">
+                <a href="/">
+                  <div class="chapterText">
+                    <span>chapter1</span>
+                  </div>
+                </a>
+                <a href="/">
+                  <div class="chapterText">
+                    <span>chapter1</span>
+                  </div>
+                </a>
+                <a href="/">
+                  <div class="chapterText">
+                    <span>chapter1</span>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="hidden">
+    <div class="loginContainer">
+      <form id="loginPage">
+        <div class="loginName">
+          <label for="Name">Name:</label>
+          <input type="text" class="loginControl" id="Name" name="Name">
+        </div>
+        <div class="loginPassword">
+          <label for="Password">Password:</label>
+          <input type="password" class="loginControl" id="Password" name="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">LOGIN</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

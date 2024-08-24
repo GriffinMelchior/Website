@@ -1,0 +1,66 @@
+.content{
+  height: 100vh;
+  padding-top: 20px;
+}
+.manga{
+  background-color: rgb(255, 255, 255);
+}
+.novel{
+  background-color: rgb(255, 255, 255);
+}
+.row{
+  margin: 0 12px;
+  padding-left: 10px;
+  padding-top: 12px;
+}
+
+@media (min-width: 768px){
+  .row{
+    width: 50%;
+  }
+  .content{
+    display: flex;
+  }
+}
+
+.item{
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+}
+.coverPage{
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+
+}
+.title{
+  padding-left: 90px;
+  margin-bottom: 6PX;
+  margin-top: -3px;
+}
+.titleText{
+  font-size: 14px;
+  margin: 0;
+  font-weight: 700;
+}
+.chapter{
+  padding-left: 90px;
+}
+
+.coverPage > a > img{
+  height: 100%;
+}
+
+.rowName > h1{
+  font-family: sans-serif;
+  font-weight: 400;
+  color: rgb(255, 30, 0);
+  font-size: 20px;
+}
+.rowName{
+  padding-left: 6px;
+  border-bottom: 1px solid #888;
+}
