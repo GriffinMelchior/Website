@@ -31,7 +31,7 @@ app.post('/', async (req, res) => {
     const { Name: name, Password: password } = req.body;
 
     if (users[name] && users[name].password === password) {
-      res.json({login: "Login success, click outside of the login form to proceed", info: users[name].info})
+      res.json({login: "Login success, click outside of the login form to proceed", info: users[name].id})
     } else {
       res.json({login: "Password or Username may be incorrect"})
     }
