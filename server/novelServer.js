@@ -17,21 +17,23 @@ app.use(express.static(path.resolve(__dirname, '../frontEnd')));
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../frontEnd/homePage.html'));
 });
+app.get('/userProfile', (req, res)=>{
+  res.sendFile(path.resolve(__dirname, '../frontEnd/userProfile.html'))
+})
+
 
 
 app.post('/', async (req, res) => {
   try {
-    const data = await fs.readFile(path.resolve(__dirname, 'DB/info.json'), 'utf-8');
+    const data = await fs.readFile(path.resolve(__dirname, 'DB/users.json'), 'utf-8');
     const users = JSON.parse(data);
 
     const { Name: name, Password: password } = req.body;
 
     if (users[name] && users[name].password === password) {
-      console.log('i am in');
-      res.status(200).send('Login successful');
+      res.json({login: "Login success, click outside of the login form to proceed", info: users[name].info})
     } else {
-      console.log('wrong one');
-      res.status(401).send('Invalid credentials');
+      res.json({login: "Password or Username may be incorrect"})
     }
   } catch (error) {
     console.error('Error:', error);
@@ -40,3 +42,4 @@ app.post('/', async (req, res) => {
 });
 
 app.listen(5000);
+

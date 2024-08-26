@@ -36,6 +36,7 @@ buttons.forEach(button => {
 
 export const carousel = document.querySelector('.carousel');
 const loginContainer = document.querySelector('.loginContainer')
+const loginForm = document.getElementById('loginPage')
 const slidesHeight = () => {
   const widthWindow = window.innerWidth;
   const isMobile = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop|BlackBerry|IEMobile|Mobile|Kindle|Silk|Windows Phone/i.test(navigator.userAgent);
@@ -46,6 +47,7 @@ const slidesHeight = () => {
   }
   if(isMobile){
     loginContainer.style.width = '250px';
+    loginForm.style.width = '210px'
   }
 };
 

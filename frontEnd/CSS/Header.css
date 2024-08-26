@@ -133,8 +133,16 @@
   color: rgb(43, 73, 57);
 }
 
+#loginPage{
+  width: 310px;
+}
+
+.input{
+  width: inherit;
+}
+
 .loginControl{
-  width: 300px;
+  width: inherit;
   height: 34px;
   display: block;
   margin: 6px auto;
@@ -173,4 +181,10 @@
   width: inherit;
   height: inherit;
   border-radius: 20px;
+}
+
+#loginStatus{
+  color: red;
+  font-size: small;
+  margin-top: 8px;
 }

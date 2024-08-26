@@ -60,6 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         body: JSON.stringify(data),
       })
+      .then(res => res.json())
+      .then(data =>{
+       const loginStatus =  document.getElementById('loginStatus');
+       const user = data.info
+       localStorage.setItem('userInfo', user)
+       loginStatus.textContent = data.login
+      })
 
     } catch (error) {
       window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'

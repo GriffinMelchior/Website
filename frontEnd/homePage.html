@@ -23,7 +23,7 @@
         </div>
         <div class="right">
           <a id="menuToggler" href="javascript:;"></a>
-          <a id="profile" href="/">
+          <a id="profile" href="/userProfile">
             <img src="defaultProfile.jpg" alt="">
           </a> 
           <!-- href location should change to profile page -->
@@ -149,14 +149,15 @@
     <div class="loginContainer">
       <form id="loginPage">
         <h1>LOGIN NOW</h1>
-        <div class="loginName">
+        <div class="loginName input">
           <label for="Name">Username*</label>
           <input placeholder="ENTER YOUR NAME" type="text" class="loginControl" id="Name" name="Name">
         </div>
-        <div class="loginPassword">
+        <div class="loginPassword input">
           <label for="Password">Password*</label>
           <input placeholder="ENTER YOUR PASSWORD" type="password" class="loginControl" id="Password" name="Password">
         </div>
+        <p id="loginStatus"></p>
         <button type="submit" class="btn btn-primary">LOGIN</button>
       </form>
     </div>
