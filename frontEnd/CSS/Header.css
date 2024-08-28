@@ -57,6 +57,8 @@
 }
 
 .container > button{
+  margin-right: 6px;
+  display: none;
   cursor: pointer;
   width: 100px;
   height: 30px;
@@ -72,7 +74,7 @@
 }
 
 .open{
-  height: 100px;
+  height: 60px;
 }
 @media (max-width: 999px) {
   #menuToggler{
@@ -164,6 +166,9 @@
   color: white;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 5px;
 }
 
 .btn:focus{
@@ -178,8 +183,8 @@
   margin-top: 10px;
 }
 #profile > img{
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
 }
 
@@ -187,4 +192,17 @@
   color: red;
   font-size: small;
   margin-top: 8px;
+}
+
+.btnCon{
+  display: flex;
+}
+
+#c{
+  display: flex;
+
+}
+#c > form{
+  margin: 0;
+
 }

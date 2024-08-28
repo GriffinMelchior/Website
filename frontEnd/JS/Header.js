@@ -1,7 +1,7 @@
 const menu = document.getElementById('menu');
 const burgerMenu = document.getElementById('menuToggler')
 const menuHeight = menu.offsetHeight;
-
+const profile = document.querySelector('.picProfile')
 burgerMenu.addEventListener('click', ()=>{
   menu.style.transition = 'all 0.4s ease-in-out'
   menu.classList.toggle('open')
@@ -42,7 +42,6 @@ hidden.addEventListener('click',(e)=>{
   activate()
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('loginPage'); 
 
@@ -61,11 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(data),
       })
       .then(res => res.json())
-      .then(data =>{
-       const loginStatus =  document.getElementById('loginStatus');
-       const user = data.info
-       localStorage.setItem('userInfo', user)
-       loginStatus.textContent = data.login
+      .then(users =>{
+        if(users.status === true){
+          const user = users.info
+          
+          localStorage.setItem('userInfo', user);
+          login.style.display = 'none';
+          
+          profile.src = "testProf.jpeg";
+        }
+        const loginStatus =  document.getElementById('loginStatus');
+        loginStatus.textContent = users.login
       })
 
     } catch (error) {
@@ -73,3 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded",()=>{
+  if (localStorage.getItem('userInfo') === null) {
+    login.style.display = 'block';
+  } else {
+    login.style.display = 'none';
+    profile.src = "testProf.jpeg";
+  }
+})

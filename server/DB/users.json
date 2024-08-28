@@ -1,10 +1,12 @@
 {
   "John":{
     "password":"Johnson",
-    "id": "qrty"
+    "id": "qrty",
+    "avatar":"testProf.jpeg"
   },
   "Mark":{
     "password":"Markin",
-    "id":"qdsf"
+    "id":"qdsf",
+    "avatar":"testProf.jpeg"
   }
 }
