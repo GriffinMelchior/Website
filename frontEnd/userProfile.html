@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/general.css">
+  <link rel="stylesheet" href="CSS/Homepage-signUp.css">
   <script src="JS/userSignUp.js" defer></script>
   <script defer></script>
   <title>Document</title>
 </head>
 <body>
   <div class="signUp">
-    <form id="signFrom">
-      <h1>Create Account</h1>
-      <label for="Name">Username</label>
-      <input type="text" id="Name" placeholder="Username" class="inputBox">
-      <label for="Password1">Password</label>
-      <input type="text" id="Password1" placeholder="Password" class="inputBox">
-      <label for="Password2">Password</label>
-      <input type="text" id="password2" placeholder="ReEnter same Password" class="inputBox">
-      <button type="submit"></button>
-    </form>
+    <div class="verticalCenter">
+      <div id="signForm">
+        <div class="logo">
+          <img src="LOGO.png" alt="">
+        </div>
+
+        <form class="signForm">
+          <h1>Create Account</h1>
+          <label for="Name">Username</label>
+          <input type="text" id="Name" placeholder="Username" class="inputBox">
+          <label for="Password1">Password</label>
+          <input type="text" id="Password1" placeholder="Password" class="inputBox">
+          <label for="Password2">Password</label>
+          <input type="text" id="password2" placeholder="ReEnter same Password" class="inputBox">
+          <button type="submit"></button>
+        </form>  
+      </div>
+    </div>  
   </div>
   <div class="userStats">
     <h1></h1>

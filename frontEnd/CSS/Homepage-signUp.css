@@ -1,0 +1,37 @@
+body{
+  background-image: url(../image.jpg);
+  background-position: center;
+}
+
+.signUp{
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.verticalCenter{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#signForm{
+  background-color: aliceblue;
+}
+.logo{
+  height: 100px;
+  width: inherit;
+  display: flex;
+  justify-content:center;
+}
+
+.logo > img{
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+@media (min-width: 768px){
+ .signUp{max-width: 720px;} 
+}
+
+@media (min-width: 576px) {
+  .signUp{max-width: 540px;}
+}
