@@ -10,14 +10,14 @@ body{
 
 .verticalCenter{
   height: 100vh;
-  display: flex;
-  align-items: center;
+  transform: translateY(24%)
 }
 #signForm{
   background-color: aliceblue;
+  padding: 10px;
 }
 .logo{
-  height: 100px;
+  max-height: 100px;
   width: inherit;
   display: flex;
   justify-content:center;
@@ -26,12 +26,38 @@ body{
 .logo > img{
   max-width: 100%;
   height: auto;
-  width: auto\9;
+  width: 20%;
 }
-@media (min-width: 768px){
- .signUp{max-width: 720px;} 
+
+.signForm > *{
+  display: block;
+  margin: 0 auto;
+}
+
+.signForm > h1{
+  text-align: center;
+  font-size: 1em;
+}
+
+.inputBox{
+  width: 95%;
+}
+
+.signForm > button{
+  margin-top: 15px;
+  height: 40px;
+  width: 80px;
 }
 
 @media (min-width: 576px) {
   .signUp{max-width: 540px;}
+  .signForm > h1{font-size: 1.5em;}
 }
+
+@media (min-width: 768px) {
+ .signUp{max-width: 720px;}
+ .signForm > h1{font-size: 2em;} 
+}
+
+
+
