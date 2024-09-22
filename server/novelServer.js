@@ -5,24 +5,32 @@ const fs = require('fs').promises;
 const app = express();
 
 
-const upload = multer({ dest: 'uploads/' });
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
 
+const upload = multer({ storage });
 
 app.use(express.json());
 
 
 app.use(express.static(path.resolve(__dirname, '../frontEnd')));
 
-
+//redirections
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../frontEnd/homePage.html'));
 });
 app.get('/userProfile', (req, res)=>{
   res.sendFile(path.resolve(__dirname, '../frontEnd/userProfile.html'))
 })
+//end
 
-
-
+//login
 app.post('/', async (req, res) => {
   try {
     const data = await fs.readFile(path.resolve(__dirname, 'DB/users.json'), 'utf-8');
@@ -40,6 +48,12 @@ app.post('/', async (req, res) => {
     res.status(500).send('Server error');
   }
 });
+
+//upload
+app.post('/userProfile', upload.single('video'), async (req, res) => {
+  res.send('received');
+});
+
 
 app.listen(5000);
 
