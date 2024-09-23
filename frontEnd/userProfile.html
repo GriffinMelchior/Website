@@ -42,7 +42,11 @@
       </div>
     </div>
     <div class="upload">
-      <button>UPLOAD</button>
+      <form action="/userProfile" method="post" enctype="multipart/form-data">
+        <label for="video">Video</label>
+        <input type="file" name="video" accept="video/*" />
+        <button>UPLOAD</button>
+      </form>
     </div>
    </div>
   </div>
