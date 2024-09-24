@@ -50,9 +50,7 @@ app.post('/', async (req, res) => {
 });
 
 //upload
-app.post('/userProfile', upload.single('video'), async (req, res) => {
-  res.send('received');
-});
+
 
 
 app.listen(5000);

@@ -42,11 +42,26 @@
       </div>
     </div>
     <div class="upload">
-      <form action="/userProfile" method="post" enctype="multipart/form-data">
-        <label for="video">Video</label>
-        <input type="file" name="video" accept="video/*" />
-        <button>UPLOAD</button>
-      </form>
+      <button id="pop-upButton">Lorem.</button>
+      <div id="uploadType">
+        <div id="header">
+          <h1>UPLOAD YOUR FILE HERE</h1>
+          <button type="button">X</button>
+        </div>
+        <form id="uploadForm">
+          <div id="formBody">
+            <label for="fileType">Select Appropriate File Type:</label>
+            <select name="uploadType" id="fileType">
+              <option value="video">Video</option>
+              <option value="photo">Photo</option>
+            </select>
+            <label for="fileInput">Upload Your File Here</label>
+            <input type="file" id="fileInput" name="fileInput" required>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div id="overlay"></div>
     </div>
    </div>
   </div>

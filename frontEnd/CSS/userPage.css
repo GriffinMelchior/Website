@@ -1,3 +1,4 @@
+/* User Stats CSS */
 .userStats{
   max-width: 1200px;
   margin: 0px auto;
@@ -34,14 +35,27 @@
   font-size: 50px;
 }
 
-.upload > form > button{
+/* Upload CSS */
+.upload{
+  background-color: grey;
+}
+
+#pop-upButton{
   display: block;
   margin: 0 auto;
-  margin-top: 20px;
-  height: 60px;
-  width: 80px;
-  background-color: green;
-  border: solid;
-  border-color: grey;
-  border-radius: 20px;
+  background-color: rgb(5, 159, 5);
+  border-style: solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 84px;
+  border-width: 1px;
+  color: rgb(240, 240, 240);;
+  border-color: black;
+  transition:1s 1s ease-in;
 }
+#pop-upButton:active{
+  background-color: rgb(32, 32, 209);
+  color: red;
+  transition: 0s;
+}
+
