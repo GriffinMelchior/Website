@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="CSS/Homepage-signUp.css">
   <link rel="stylesheet" href="CSS/userPage.css">
   <script src="JS/userSignUp.js" defer></script>
-  <script defer></script>
+  <script src="JS/userPage.js" defer></script>
   <title>Document</title>
 </head>
 <body>
@@ -43,10 +43,10 @@
     </div>
     <div class="upload">
       <button id="pop-upButton">Lorem.</button>
-      <div id="uploadType">
+      <dialog id="modal">
         <div id="header">
           <h1>UPLOAD YOUR FILE HERE</h1>
-          <button type="button">X</button>
+          <button id="closeDownButton" type="button">X</button>
         </div>
         <form id="uploadForm">
           <div id="formBody">
@@ -60,8 +60,7 @@
             <button type="submit">Submit</button>
           </div>
         </form>
-      </div>
-      <div id="overlay"></div>
+      </dialog>
     </div>
    </div>
   </div>

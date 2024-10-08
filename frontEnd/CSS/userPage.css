@@ -36,9 +36,7 @@
 }
 
 /* Upload CSS */
-.upload{
-  background-color: grey;
-}
+
 
 #pop-upButton{
   display: block;
@@ -59,3 +57,31 @@
   transition: 0s;
 }
 
+/* Modal/Form */
+#modal{
+  margin: auto;
+  height: 40%;
+  width: 50%;
+}
+
+#header{
+  display: flex;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 2px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#header > h1{
+  font-size: medium;
+}
+
+#header > button{
+  padding-top: 2px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: large;
+  font-weight: 700;
+}

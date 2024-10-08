@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 app.get('/userProfile', (req, res)=>{
   res.sendFile(path.resolve(__dirname, '../frontEnd/userProfile.html'))
 })
-//end
+
 
 //login
 app.post('/', async (req, res) => {
