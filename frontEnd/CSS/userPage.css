@@ -85,3 +85,19 @@
   font-size: large;
   font-weight: 700;
 }
+
+.upper{
+  margin: 8px;
+}
+.lower{
+  margin: 8px;
+}
+#formBody > button {
+  display: block;
+  width: 26%;
+  margin: 12px auto;
+}
+
+#formBody {
+  display: grid;
+}

@@ -50,13 +50,17 @@
         </div>
         <form id="uploadForm">
           <div id="formBody">
-            <label for="fileType">Select Appropriate File Type:</label>
-            <select name="uploadType" id="fileType">
-              <option value="video">Video</option>
-              <option value="photo">Photo</option>
-            </select>
-            <label for="fileInput">Upload Your File Here</label>
-            <input type="file" id="fileInput" name="fileInput" required>
+            <div class="upper">
+              <label for="fileType">Select Appropriate File Type:</label>
+              <select name="uploadType" id="fileType">
+                <option value="video">Video</option>
+                <option value="photo">Photo</option>
+              </select>
+            </div>
+            <div class="lower">
+              <label for="fileInput">Upload Your File Here</label>
+              <input type="file" id="fileInput" name="fileInput" required>
+            </div>
             <button type="submit">Submit</button>
           </div>
         </form>
