@@ -52,7 +52,7 @@ app.post('/', async (req, res) => {
 //upload
 //when doing upload make sure to use name of the input and not the type
 app.post('/userProfile', upload.single('fileInput'), async (req, res) => {
-
+  res.sendStatus(200)
 });
 app.listen(5000);
 
