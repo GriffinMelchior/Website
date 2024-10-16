@@ -53,14 +53,19 @@
             <div class="upper">
               <label for="fileType">Select Appropriate File Type:</label>
               <select name="uploadType" id="fileType">
-                <option value="video">Video</option>
-                <option value="photo">Photo</option>
+                <option value="Novel">Novel</option>
+                <option value="Manga">Manga</option>
               </select>
             </div>
             <div class="lower">
               <label for="fileInput">Upload Your File Here</label>
               <input type="file" id="fileInput" name="fileInput" required>
+              <label for="contentName">Name Of The Manga</label>
+              <input id="contentName" type="text" required>
+              <label for="chapter">Chapter</label>
+              <input id="chapter" type="text" required>
             </div>
+           
             <button type="submit">Submit</button>
           </div>
         </form>
@@ -68,5 +73,8 @@
     </div>
    </div>
   </div>
+  <script>
+   console.log(document.getElementById('fileInput').value)
+  </script>
 </body>
 </html>

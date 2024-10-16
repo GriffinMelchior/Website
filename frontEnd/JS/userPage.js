@@ -14,10 +14,10 @@ const selectedType = document.getElementById('fileType');
 const acceptedFile = document.getElementById('fileInput');
 
 function updateAcceptAttribute() {
-  if (selectedType.value === 'video') {
-    acceptedFile.accept = 'video/*'; 
-  } else if (selectedType.value === 'photo') {
+  if (selectedType.value === 'Manga') {
     acceptedFile.accept = 'image/*'; 
+  } else if (selectedType.value === 'Novel') {
+    acceptedFile.accept = '.txt'; 
   }
 }
 
@@ -29,9 +29,7 @@ const form = document.getElementById('uploadForm');
 
 form.addEventListener('submit', async function (event) {
     event.preventDefault();
-
     const formData = new FormData(form);
-    
     try {
         const response = await fetch('/userProfile', {
             method: 'POST',

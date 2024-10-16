@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Text File Content</title>
+</head>
+<body>
+  <div class="test"></div>
+
+  <script>
+    function load(url, element) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();  
+        })
+        .then(data => {
+          element.innerHTML = `<pre>${data}</pre>`;  
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+          element.innerHTML = 'Failed to load content.';
+        });
+    }
+
+    var test = document.querySelector('.test');
+
+    load('text.txt', test);
+  </script>
+</body>
+</html>

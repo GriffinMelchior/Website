@@ -92,6 +92,10 @@
 .lower{
   margin: 8px;
 }
+.lower > * {
+  display: block;
+  margin: 6px;
+}
 #formBody > button {
   display: block;
   width: 26%;
@@ -100,4 +104,10 @@
 
 #formBody {
   display: grid;
+}
+#fileInput{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: "File Ready To Upload";
+  width: 215px;
 }

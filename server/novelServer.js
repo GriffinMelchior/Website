@@ -7,7 +7,11 @@ const app = express();
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads');
+    if(req.body.uploadType == "Manga"){
+      cb(null, 'Manga');
+    }else{
+      cb(null, 'Novel');
+    }
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
@@ -53,6 +57,8 @@ app.post('/', async (req, res) => {
 //when doing upload make sure to use name of the input and not the type
 app.post('/userProfile', upload.single('fileInput'), async (req, res) => {
   res.sendStatus(200)
+  console.log(req.body)
 });
+
 app.listen(5000);
 
