@@ -59,9 +59,13 @@
 
 /* Modal/Form */
 #modal{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: auto;
-  height: 40%;
-  width: 50%;
+  position: absolute;
+  background: #eee;
 }
 
 #header{
@@ -108,6 +112,18 @@
 #fileInput{
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: "File Ready To Upload";
-  width: 215px;
+  text-overflow: " File Ready To Upload";
+  width: 236px;
+}
+
+.lower1{
+  margin-bottom: 12px;
+}
+
+.lower2{
+  margin: 10px 0;
+}
+.lower2 > * {
+  display: block;
+  margin: 5px;
 }

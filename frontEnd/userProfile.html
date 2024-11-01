@@ -17,7 +17,6 @@
         <div class="logo">
           <img src="LOGO.png" alt="">
         </div>
-
         <form class="signForm">
           <h1>Create Account</h1>
           <label for="Name">Username</label>
@@ -43,6 +42,7 @@
     </div>
     <div class="upload">
       <button id="pop-upButton">Lorem.</button>
+
       <dialog id="modal">
         <div id="header">
           <h1>UPLOAD YOUR FILE HERE</h1>
@@ -50,6 +50,7 @@
         </div>
         <form id="uploadForm" action="/userProfile"  method="post" enctype="multipart/form-data">
           <div id="formBody">
+
             <div class="upper">
               <label for="fileType">Select Appropriate File Type:</label>
               <select name="uploadType" id="fileType">
@@ -57,24 +58,35 @@
                 <option value="Manga">Manga</option>
               </select>
             </div>
+
             <div class="lower">
-              <label for="fileInput">Upload Your File Here</label>
-              <input type="file" id="fileInput" name="fileInput" required>
-              <label for="contentName">Name Of The Manga</label>
-              <input id="contentName" type="text" required>
-              <label for="chapter">Chapter</label>
-              <input id="chapter" type="text" required>
+
+              <div class="lower1">
+                <label for="fileInput">Upload Your File Here</label>
+                <input type="file" id="fileInput" name="fileInput" required>
+              </div>
+              
+
+              <div class="lower2">
+                <label for="contentName">Name Of The <span id="uploadType"></span>:</label>
+                <input id="contentName" type="text" required>
+              </div>
+          
+
+              <div class="lower2">
+                <label for="chapter">Chapter:</label>
+                <input id="chapter" type="text" required>
+              </div>
+             
             </div>
-           
+
             <button type="submit">Submit</button>
           </div>
         </form>
       </dialog>
+
     </div>
    </div>
   </div>
-  <script>
-   console.log(document.getElementById('fileInput').value)
-  </script>
 </body>
 </html>
